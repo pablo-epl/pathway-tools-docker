@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  pathway-tools:
+    container_name: pathway-tools
+    env_file:
+      .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PT_VERSION: ${PT_VERSION}
+    image: "pathway-tools:${PT_VERSION}"
+    stdin_open: true
+    tty: true
+    ports:
+    - "5000:5000"
