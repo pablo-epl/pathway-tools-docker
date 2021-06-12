@@ -1,4 +1,3 @@
 #!/bin/bash
 
-Xvfb $DISPLAY &
-/opt/pathway-tools/pathway-tools -python-local-only-non-strict
+echo "(PYTHON-SERVER :verbose? NIL :strict? NIL :local-only? NIL)" | ./opt/pathway-tools/pathway-tools -lisp
