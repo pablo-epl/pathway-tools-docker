@@ -20,6 +20,8 @@ COPY config/run-pathway-tools.sh /opt/bin/run-pathway-tools.sh
 
 COPY pathway-tools-install/pathway-tools-$PT_VERSION-linux-64-tier1-install /opt/bin/pathway-tools-$PT_VERSION-linux-64-tier1-install
 
+RUN chmod +x /opt/bin/pathway-tools-$PT_VERSION-linux-64-tier1-install
+
 RUN /opt/bin/install-pathway-tools.sh
 
 CMD [ "/opt/bin/run-pathway-tools.sh" ]
